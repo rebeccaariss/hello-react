@@ -12,18 +12,18 @@ const Button = (props) => {
 };
 
 const Application = () => {
-  const [ text, setText ] = useState("");
+  const [ name, setName ] = useState("Rebecca");
 
   const reset = () => {
     console.log("reset");
-    setText("");
+    setName("");
   };
 
   return (
     <main>
       <input placeholder="Type your name"></input>
       <Button reset={reset} />
-      <h1>Hello React</h1>
+      <h1>Hello {name}</h1>
     </main>
   );
 };
