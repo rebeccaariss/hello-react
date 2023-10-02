@@ -3,21 +3,26 @@ import ReactDOM from 'react-dom';
 import './index.css';
 
 const Button = (props) => {
-  // your code here
+  const { reset } = props;
+  return (
+    <button onClick={reset}>
+      Reset
+    </button>
+  );
 };
 
 const Application = () => {
-
-  // your code here
+  const [ text, setText ] = useState("");
 
   const reset = () => {
     console.log("reset");
-    // your code here
+    setText("");
   };
 
   return (
     <main>
-      {/* your code here -- this entire line including the curly braces can be removed */}
+      <input placeholder="Type your name"></input>
+      <Button reset={reset} />
       <h1>Hello React</h1>
     </main>
   );
